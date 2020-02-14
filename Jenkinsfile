@@ -13,7 +13,7 @@ pipeline {
         }
         stage('run test') {
             steps {
-               sh "docker-compose up TS_Acceptance
+               sh "docker-compose up TS_Acceptance"
             }
         }       
     }

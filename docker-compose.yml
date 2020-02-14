@@ -15,13 +15,13 @@ services:
         environment:
         - HUB_HOST=hub
     TS_Acceptance:
-        image: hyousaf/selenium-docker
+        image: quorum/selenium-docker
         depends_on:
             - chrome
             - firefox
         environment:
             - BROWSER=chrome
             - HUB_HOST=hub
-           - MODULE=TS_Acceptance.xml
+            - MODULE=TS_Acceptance.xml
         volumes:
             - ./test-output/ts-acceptance:/usr/share/quorum/test-output        

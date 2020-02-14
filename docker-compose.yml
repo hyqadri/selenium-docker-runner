@@ -22,6 +22,6 @@ services:
         environment:
             - BROWSER=chrome
             - HUB_HOST=hub
-            - MODULE=TS_Acceptance.xml
+           - MODULE=TS_Acceptance.xml
         volumes:
             - ./test-output/ts-acceptance:/usr/share/quorum/test-output        

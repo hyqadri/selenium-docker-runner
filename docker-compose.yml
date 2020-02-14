@@ -1,5 +1,7 @@
 version: "3"
 services:
+    ports:
+        4444:4444
     hub:
         image: selenium/hub:3.141.59       
     chrome:
@@ -24,4 +26,4 @@ services:
             - HUB_HOST=hub
             - MODULE=TS_Acceptance.xml
         volumes:
-            - ./output/ts-acceptance:/usr/share/quorum/test-output        
+            - ./test-output/ts-acceptance:/usr/share/quorum/test-output        

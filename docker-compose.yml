@@ -1,0 +1,27 @@
+version: "3"
+services:
+    hub:
+        image: selenium/hub:3.141.59       
+    chrome:
+        image: selenium/node-chrome:3.141.59
+        depends_on:
+        - hub
+        environment:
+        - HUB_HOST=hub
+    firefox:
+        image: selenium/node-firefox:3.141.59
+        depends_on:
+        - hub
+        environment:
+        - HUB_HOST=hub
+    TS_Acceptance:
+        image: hyousaf/selenium-docker
+        depends_on:
+            - chrome
+            - firefox
+        environment:
+            - BROWSER=chrome
+            - HUB_HOST=hub
+            - MODULE=TS_Acceptance.xml
+        volumes:
+            - ./docker-test-output:/usr/share/quorum/test-output        

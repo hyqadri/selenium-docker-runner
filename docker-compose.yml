@@ -15,7 +15,7 @@ services:
         environment:
         - HUB_HOST=hub
     TS_Acceptance:
-        image: quorum/selenium-docker
+        image: hyousaf/selenium-docker
         depends_on:
             - chrome
             - firefox

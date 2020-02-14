@@ -24,4 +24,4 @@ services:
             - HUB_HOST=hub
             - MODULE=TS_Acceptance.xml
         volumes:
-            - ./docker-test-output:/usr/share/quorum/test-output        
+            - ./output/ts-acceptance:/usr/share/quorum/test-output        

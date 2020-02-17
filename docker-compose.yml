@@ -15,7 +15,7 @@ services:
         environment:
         - HUB_HOST=hub
     TS_Acceptance:
-        image: hyousaf/selenium-docker
+        image: hyousaf/selenium-docker:latest
         depends_on:
             - chrome
             - firefox

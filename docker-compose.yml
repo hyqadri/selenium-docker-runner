@@ -1,7 +1,7 @@
 version: "3"
 services:   
     hub:
-        image: selenium/hub:3.141.59       
+        image: selenium/hub:3.141.59          
     chrome:
         image: selenium/node-chrome:3.141.59
         depends_on:
@@ -24,4 +24,4 @@ services:
             - HUB_HOST=hub
             - MODULE=TS_Acceptance.xml
         volumes:
-            - ./test-output/ts-acceptance:/usr/share/quorum/test-output        
+            - ./test-output:/usr/share/quorum/test-output        
